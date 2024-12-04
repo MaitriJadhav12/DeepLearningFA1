@@ -1,0 +1,15 @@
+kaggle==1.5.16
+matplotlib==3.8.2
+seaborn==0.13.0
+numpy==1.26.2
+pandas==2.1.4
+uvicorn==0.25.0
+fastapi==0.108.0
+streamlit==1.22.0
+protobuf==3.19.6
+python-multipart==0.0.6
+
+# Install the version of Tensorflow depending on your processor: darwin == Mac, ARM == M1
+tensorflow-macos==2.10.0; sys_platform == 'darwin' and 'ARM' in platform_version # Mac M-chips
+tensorflow==2.10.0; sys_platform == 'darwin' and 'ARM' not in platform_version # Mac Intel chips
+tensorflow==2.10.0; sys_platform != 'darwin' # Windows & Ubuntu Intel chips
